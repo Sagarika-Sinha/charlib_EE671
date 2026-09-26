@@ -1,5 +1,5 @@
 settings:
-    lib_name: inverter_sky130_tt_1v80_025C_pex
+    lib_name: ee671_dfxtp_pex
     units:
         time: ns
         voltage: V
@@ -21,9 +21,10 @@ settings:
     temperature: 27
     cell_defaults:
         models:
-    models:
-      - "config/mc_switches.spice"
-      - "sky130A/libs.tech/ngspice/sky130.lib.spice tt"
+            - "config/mc_switches.spice"
+            - "sky130A/libs.tech/ngspice/sky130.lib.spice tt"
+        data_slews: [0.01, 0.1, 1.0]
+        loads: [0.0005, 0.01, 0.1]
     simulation:
         backend: ngspice-subprocess
     debug: true
