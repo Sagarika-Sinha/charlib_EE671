@@ -1,0 +1,38 @@
+settings:
+    lib_name: ee671_and2b_pex
+    units:
+        time: ns
+        voltage: V
+        capacitive_load: pF
+        leakage_power: nW
+        energy: fJ
+    named_nodes:
+        primary_power:
+            name: VDD
+            voltage: 1.8
+        primary_ground:
+            name: VSS
+            voltage: 0
+    logic_thresholds:
+        low: 0.2
+        high: 0.8
+        rising: 0.5
+        falling: 0.5
+    temperature: 27
+    cell_defaults:
+        models:
+            - /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+        data_slews: [0.01, 0.1, 1.0]
+        loads: [0.0005, 0.01, 0.1]
+    simulation:
+        backend: ngspice-subprocess
+    debug: true
+    debug_dir: debug_out
+
+cells:
+    and2b:
+        netlist: /charlib_EE671/cells/and2b_pex.spice
+        inputs: [A_N, B]
+        outputs: [X]
+        functions: ["X = !A_N & B"]
+        area: 21.235
