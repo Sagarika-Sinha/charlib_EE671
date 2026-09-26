@@ -67,7 +67,7 @@ jobs:
             echo "=== Running CharLib on: $cfg"
             echo "====================================================" >> charlib.log
             echo "### $cfg" >> charlib.log
-            charlib run "$cfg" >> charlib.log 2>&1 || {
+            charlib run "$cfg" -j 1 >> charlib.log 2>&1 || {
               echo "!!! FAILED: $cfg (see charlib.log)"
               status=1
             }
