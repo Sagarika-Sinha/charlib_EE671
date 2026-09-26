@@ -1,0 +1,10 @@
+.subckt and2b A_N B X VDD VSS
+Xp1 a  A_N VDD VDD sky130_fd_pr__pfet_01v8 w=0.85 l=0.15
+Xn1 a  A_N VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+Xp2 y  a   VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xp3 y  B   VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xn2 y  a   mid VSS sky130_fd_pr__nfet_01v8 w=0.84 l=0.15
+Xn3 mid B  VSS VSS sky130_fd_pr__nfet_01v8 w=0.84 l=0.15
+Xp4 X  y   VDD VDD sky130_fd_pr__pfet_01v8 w=1.35 l=0.15
+Xn4 X  y   VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.ends

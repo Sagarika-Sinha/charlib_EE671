@@ -1,0 +1,21 @@
+* NGSPICE file created from buf.ext - technology: sky130A
+.subckt buf A X VDD VSS
+
+X0 a_286_56# A VSS VSS sky130_fd_pr__nfet_01v8 ad=0.07455 pd=0.775 as=0.0945 ps=1.01 w=0.42 l=0.15
+X1 X a_286_56# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.432 pd=3.34 as=0.30375 ps=2.25 w=1.35 l=0.15
+X2 VDD A a_286_56# VDD sky130_fd_pr__pfet_01v8 ad=0.30375 pd=2.25 as=0.23963 ps=1.705 w=1.35 l=0.15
+X3 X a_286_56# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.1344 pd=1.48 as=0.0945 ps=1.01 w=0.42 l=0.15
+X4 a_286_56# A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.23963 pd=1.705 as=0.30375 ps=2.25 w=1.35 l=0.15
+X5 VSS A a_286_56# VSS sky130_fd_pr__nfet_01v8 ad=0.0945 pd=1.01 as=0.07455 ps=0.775 w=0.42 l=0.15
+C0 a_286_56# X 0.12024f
+C1 A VDD 0.18808f
+C2 a_286_56# A 0.1275f
+C3 a_286_56# VDD 0.45069f
+C4 A X 0.00226f
+C5 VDD X 0.17473f
+C6 X VSS 0.13924f
+C7 A VSS 0.25877f
+C8 VDD VSS 1.4054f
+C9 a_286_56# VSS 0.41587f
+
+.ends buf

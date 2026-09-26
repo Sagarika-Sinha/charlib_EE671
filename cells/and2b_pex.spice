@@ -1,0 +1,37 @@
+* NGSPICE file created from and2b.ext - technology: sky130A
+.subckt and2b A_N B X VDD VSS
+X0 a_286_56# A_N VSS VSS sky130_fd_pr__nfet_01v8 ad=0.1344 pd=1.48 as=0.1344 ps=1.32 w=0.42 l=0.15
+X1 a_495_56# B VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2048 pd=1.92 as=0.17126 ps=1.41057 w=0.64 l=0.15
+X2 a_589_56# a_286_56# a_495_56# VSS sky130_fd_pr__nfet_01v8 ad=0.1491 pd=1.195 as=0.2688 ps=2.32 w=0.84 l=0.15
+X3 a_286_56# A_N VDD VDD sky130_fd_pr__pfet_01v8 ad=0.272 pd=2.34 as=0.22745 ps=1.87342 w=0.85 l=0.15
+X4 VDD a_286_56# a_495_56# VDD sky130_fd_pr__pfet_01v8 ad=0.17126 pd=1.41057 as=0.2048 ps=1.92 w=0.64 l=0.15
+X5 VSS B a_589_56# VSS sky130_fd_pr__nfet_01v8 ad=0.2688 pd=2.64 as=0.1491 ps=1.195 w=0.84 l=0.15
+X6 VSS a_495_56# X VSS sky130_fd_pr__nfet_01v8 ad=0.1344 pd=1.32 as=0.1344 ps=1.48 w=0.42 l=0.15
+X7 VDD a_495_56# X VDD sky130_fd_pr__pfet_01v8 ad=0.36124 pd=2.97543 as=0.432 ps=3.34 w=1.35 l=0.15
+C0 a_495_56# B 0.06025f
+C1 A_N a_286_56# 0.05903f
+C2 A_N VDD 0.14524f
+C3 X B 0.01841f
+C4 a_589_56# B 0.00759f
+C5 X a_495_56# 0.11817f
+C6 a_495_56# a_589_56# 0.07716f
+C7 A_N a_495_56# 0.00422f
+C8 X A_N 0
+C9 A_N a_589_56# 0
+C10 VDD a_286_56# 0.28665f
+C11 B a_286_56# 0.04878f
+C12 B VDD 0.14163f
+C13 a_495_56# a_286_56# 0.14343f
+C14 a_495_56# VDD 0.57482f
+C15 X a_286_56# 0
+C16 X VDD 0.16219f
+C17 a_589_56# a_286_56# 0.00759f
+C18 a_589_56# VDD 0.01152f
+C19 X VSS 0.13123f
+C20 B VSS 0.16217f
+C21 A_N VSS 0.17393f
+C22 VDD VSS 1.92672f
+C23 a_589_56# VSS 0.10434f
+C24 a_495_56# VSS 0.48534f
+C25 a_286_56# VSS 0.26357f
+.ends

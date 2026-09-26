@@ -1,0 +1,6 @@
+.subckt buf A X VDD VSS
+Xp1 ab A  VDD VDD sky130_fd_pr__pfet_01v8 w=2.70 l=0.15
+Xn1 ab A  VSS VSS sky130_fd_pr__nfet_01v8 w=0.84 l=0.15
+Xp2 X  ab VDD VDD sky130_fd_pr__pfet_01v8 w=1.35 l=0.15
+Xn2 X  ab VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.ends

@@ -1,0 +1,35 @@
+.subckt dfxtp D CLK Q VDD VSS
+* clock buffering
+Xpcn clkneg CLK VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xncn clkneg CLK VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+Xpcp clkpos clkneg VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xncp clkpos clkneg VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* input inverter
+Xpdb db D VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xndb db D VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* master transmission gate
+Xptm m0 clkpos db VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xntm m0 clkneg db VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* master inverter
+Xpm m1 m0 VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xnm m1 m0 VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* master keeper
+Xpmf mfb m1 VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xnmf mfb m1 VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+Xptmf m0 clkneg mfb VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xntmf m0 clkpos mfb VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* slave transmission gate
+Xpts s0 clkneg m1 VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xnts s0 clkpos m1 VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* slave inverter
+Xps s1 s0 VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xns s1 s0 VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* slave keeper
+Xpsf sfb s1 VDD VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xnsf sfb s1 VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+Xptsf s0 clkpos sfb VDD sky130_fd_pr__pfet_01v8 w=0.64 l=0.15
+Xntsf s0 clkneg sfb VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+* output inverter
+Xpq Q s1 VDD VDD sky130_fd_pr__pfet_01v8 w=1.35 l=0.15
+Xnq Q s1 VSS VSS sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.ends
