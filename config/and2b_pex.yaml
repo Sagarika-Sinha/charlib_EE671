@@ -31,7 +31,7 @@ settings:
 
 cells:
     and2b:
-        netlist: /charlib_EE671/cells/and2b_pex.spice
+        netlist: "cells/and2b_pex.spice"
         inputs: [A_N, B]
         outputs: [X]
         functions: ["X = !A_N & B"]

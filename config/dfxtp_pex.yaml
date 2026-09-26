@@ -31,7 +31,7 @@ settings:
 
 cells:
     dfxtp:
-        netlist: /charlib_EE671/cells/dfxtp_pex.spice
+        netlist: "cells/dfxtp_pex.spice"
         inputs: [D]
         outputs: [Q]
         clock: posedge CLK
@@ -40,5 +40,4 @@ cells:
         clock_slews: [0.01, 1.0]
         setup_time_range: [-0.2, 0.6]
         hold_time_range: [-0.2, 0.6]
-        metastability_constraint_sweep_samples: 10
         area: 65.273
