@@ -25,15 +25,14 @@ settings:
             - "sky130A/libs.tech/ngspice/sky130.lib.spice tt"
         data_slews: [0.01, 0.1, 1.0]
         loads: [0.0005, 0.01, 0.1]
-    simulation:
-        backend: ngspice-subprocess
+
     debug: true
     debug_dir: debug_out
 
 cells:
     dfxtp:
         netlist: "cells/dfxtp_pex.spice"
-        inputs: [D]
+        inputs: [D, CLK]
         outputs: [Q]
         clock: posedge CLK
         functions: ["Q = D"]
